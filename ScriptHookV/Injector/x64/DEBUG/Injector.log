@@ -1,0 +1,13 @@
+﻿registry.obj : error LNK2001: 无法解析的外部符号 __imp__invalid_parameter
+Injection.obj : error LNK2001: 无法解析的外部符号 __imp__invalid_parameter
+main.obj : error LNK2001: 无法解析的外部符号 __imp__invalid_parameter
+General.obj : error LNK2001: 无法解析的外部符号 __imp__invalid_parameter
+Log.obj : error LNK2001: 无法解析的外部符号 __imp__invalid_parameter
+registry.obj : error LNK2001: 无法解析的外部符号 __imp__CrtDbgReportW
+Injection.obj : error LNK2001: 无法解析的外部符号 __imp__CrtDbgReportW
+main.obj : error LNK2001: 无法解析的外部符号 __imp__CrtDbgReportW
+General.obj : error LNK2001: 无法解析的外部符号 __imp__CrtDbgReportW
+Log.obj : error LNK2001: 无法解析的外部符号 __imp__CrtDbgReportW
+msvcprtd.lib(locale0_implib.obj) : error LNK2019: 无法解析的外部符号 __imp__free_dbg，该符号在函数 "public: static void __cdecl std::_Fac_node::operator delete(void *)" (??3_Fac_node@std@@SAXPEAX@Z) 中被引用
+msvcprtd.lib(locale0_implib.obj) : error LNK2019: 无法解析的外部符号 __imp__malloc_dbg，该符号在函数 "public: static void * __cdecl std::_Fac_node::operator new(unsigned __int64)" (??2_Fac_node@std@@SAPEAX_K@Z) 中被引用
+D:\VS project\GTA Dev\ScriptHookV\x64\DEBUG\Injector.exe : fatal error LNK1120: 4 个无法解析的外部命令

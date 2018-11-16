@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ScriptHookV.cpp" />
+    <ClCompile Include="DirectX\D3d11Hook.cpp">
+      <Filter>DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooking\Hooking.cpp">
+      <Filter>Hooking</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\InputHook.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripting\NativeInvoker.cpp">
+      <Filter>Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripting\Pools.cpp">
+      <Filter>Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripting\ScriptEngine.cpp">
+      <Filter>Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripting\ScriptManager.cpp">
+      <Filter>Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\General.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Log.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Versioning.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="ASI Loader\ASILoader.cpp">
+      <Filter>AsiLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\PEImage.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\MenuBase\menu.cpp">
+      <Filter>Menu\MenuBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\MenuBase\menucontrols.cpp">
+      <Filter>Menu\MenuBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\MenuBase\menukeyboard.cpp">
+      <Filter>Menu\MenuBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\MenuBase\menusettings.cpp">
+      <Filter>Menu\MenuBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\MenuBase\menuutils.cpp">
+      <Filter>Menu\MenuBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\3rd\tinystr.cpp">
+      <Filter>Menu\3rdParty</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\3rd\tinyxml.cpp">
+      <Filter>Menu\3rdParty</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\3rd\tinyxmlerror.cpp">
+      <Filter>Menu\3rdParty</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\3rd\tinyxmlparser.cpp">
+      <Filter>Menu\3rdParty</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\3rd\translate.cpp">
+      <Filter>Menu\3rdParty</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Path\Path.cpp">
+      <Filter>Menu\Path</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\UI\Script.cpp">
+      <Filter>Menu\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Function\Function.cpp">
+      <Filter>Menu\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Function\Player\Player.cpp">
+      <Filter>Menu\Function\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Function\keyboard.cpp">
+      <Filter>Menu\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Function\Vehicle\Vehicle.cpp">
+      <Filter>Menu\Function\Vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Function\Vehicle\Veh_Setting.cpp">
+      <Filter>Menu\Function\Vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Function\Teleport\teleport.cpp">
+      <Filter>Menu\Function\teleport</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Function\Animation\Animation.cpp">
+      <Filter>Menu\Function\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Function\Weapon\weapon.cpp">
+      <Filter>Menu\Function\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Patched\Patched.cpp">
+      <Filter>Menu\Patched Options</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Function\online\online.cpp">
+      <Filter>Menu\Function\Online</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Function\Pools\PoolsFunc.cpp">
+      <Filter>Menu\Function\Pools</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Function\Props\Props.cpp">
+      <Filter>Menu\Function\Prop</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Function\Vehicle\Mods.cpp">
+      <Filter>Menu\Function\Vehicle</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ScriptHookV.h" />
+    <ClInclude Include="DirectX\D3d11Hook.h">
+      <Filter>DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooking\Hooking.h">
+      <Filter>Hooking</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\InputHook.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripting\NativeInvoker.h">
+      <Filter>Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripting\Pools.h">
+      <Filter>Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripting\ScriptEngine.h">
+      <Filter>Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripting\ScriptManager.h">
+      <Filter>Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripting\ScriptThread.h">
+      <Filter>Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\General.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Log.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Pattern.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Versioning.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="ASI Loader\ASILoader.h">
+      <Filter>AsiLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\PEImage.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\inc\enums.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\inc\nativeCaller.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\inc\natives.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SDK\inc\types.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\MenuBase\menu.h">
+      <Filter>Menu\MenuBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\MenuBase\menucontrols.h">
+      <Filter>Menu\MenuBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\MenuBase\menukeyboard.h">
+      <Filter>Menu\MenuBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\MenuBase\menusettings.h">
+      <Filter>Menu\MenuBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\MenuBase\menuutils.h">
+      <Filter>Menu\MenuBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\MenuBase\Scaleform.h">
+      <Filter>Menu\MenuBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\3rd\json.hpp">
+      <Filter>Menu\3rdParty</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\3rd\tinystr.h">
+      <Filter>Menu\3rdParty</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\3rd\tinyxml.h">
+      <Filter>Menu\3rdParty</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\3rd\translate.h">
+      <Filter>Menu\3rdParty</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\3rd\simpleini\SimpleIni.h">
+      <Filter>Menu\3rdParty</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Path\Paths.h">
+      <Filter>Menu\Path</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\UI\Script.h">
+      <Filter>Menu\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Function\Function.h">
+      <Filter>Menu\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Function\Player\player.h">
+      <Filter>Menu\Function\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\internal_native.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Function\ObjectList.h">
+      <Filter>Menu\ModelList</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Function\keyboard.h">
+      <Filter>Menu\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Function\Vehicle\Vehicle.h">
+      <Filter>Menu\Function\Vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Function\Vehicle\Veh_Setting.h">
+      <Filter>Menu\Function\Vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Function\Teleport\teleport.h">
+      <Filter>Menu\Function\teleport</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Function\Animation\Animation.h">
+      <Filter>Menu\Function\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Function\list.h">
+      <Filter>Menu\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Function\Weapon\weapon.h">
+      <Filter>Menu\Function\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Patched\Patched.h">
+      <Filter>Menu\Patched Options</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Function\Vehicle\VehHash.h">
+      <Filter>Menu\Function\Vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Function\online\online.h">
+      <Filter>Menu\Function\Online</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Function\Pools\PoolsFunc.h">
+      <Filter>Menu\Function\Pools</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Function\Props\Props.h">
+      <Filter>Menu\Function\Prop</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Function\Vehicle\Mods.h">
+      <Filter>Menu\Function\Vehicle</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="LICENSE-ntauthority.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="DirectX">
+      <UniqueIdentifier>{d44d7a6f-8ad8-442d-a00a-a421d330c3e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hooking">
+      <UniqueIdentifier>{06f1ea93-6ef5-4130-a070-361b53de9609}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{45694341-3b7c-41f1-8b7b-9a15466a81cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripting">
+      <UniqueIdentifier>{9cc3f6a6-47b5-4486-8ca2-ed03eb7e9b81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{d82a8735-5fb9-4696-ab6d-1a4c8490e5e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AsiLoader">
+      <UniqueIdentifier>{cff10aa4-b6ed-4733-b464-1af6b8d2e78b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK">
+      <UniqueIdentifier>{81ccb2e9-5e56-4677-86fe-d52cfe4a7743}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu">
+      <UniqueIdentifier>{8067a67d-a6ff-44e5-87aa-e5601c268c1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\MenuBase">
+      <UniqueIdentifier>{df4d175f-7152-487d-852a-cc6b52ed0a22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\3rdParty">
+      <UniqueIdentifier>{d5d98bf2-a180-480c-af07-08bc8e613b86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\Path">
+      <UniqueIdentifier>{b1c72e93-ddaf-43c9-b286-6a27a914b498}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\UI">
+      <UniqueIdentifier>{a63ab2de-72dc-4d74-a1c5-0f5bf9691f9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\Function">
+      <UniqueIdentifier>{7469e3b6-a545-4c67-85b2-640b511e6e5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\Function\Player">
+      <UniqueIdentifier>{55ceb119-1311-4275-aed2-47a5f8dc893f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\ModelList">
+      <UniqueIdentifier>{8efaebba-e10c-4b28-83fa-b246298541c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\Function\Vehicle">
+      <UniqueIdentifier>{dd2876a5-1c5c-4f58-8fa1-38cd35f9d9ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\Function\teleport">
+      <UniqueIdentifier>{45f848dc-242e-4a2d-933c-e2f19fe97dce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\Function\Animation">
+      <UniqueIdentifier>{48d60d2d-24a6-4eb6-a765-5c479afb952c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\Function\Weapon">
+      <UniqueIdentifier>{47fe816e-7f13-441f-8eae-b04da266e585}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\Function\Prop">
+      <UniqueIdentifier>{d98438c6-3bc3-43b0-88e2-3ac575226dc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\Patched Options">
+      <UniqueIdentifier>{11b2cc4c-6c32-4ff4-8b27-1f032356ec19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\Function\Online">
+      <UniqueIdentifier>{edbf9a26-9e20-4fa5-94da-c3bf89ef15a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\Function\Pools">
+      <UniqueIdentifier>{61cd7539-e48f-4b2d-a95b-f3e5c132c573}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
