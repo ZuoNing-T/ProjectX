@@ -1,7 +1,7 @@
-#include "../MenuBase/menu.h"
 #include "../../ScriptHookV.h"
-#include "../../Scripting/ScriptEngine.h"
-#include "../../Scripting/ScriptManager.h"
+#include "..\..\Scripting\ScriptEngine.h"
+#include "..\..\globalHandle.h"
+//#include "../../Scripting/ScriptManager.h"
 #include "../../ASI Loader/ASILoader.h"
 #include "../internal_native.h"
 #include "../Function/Player/player.h"
@@ -544,11 +544,6 @@ void weather()
 void test()
 {
 	addTitle("test");
-	if (menu.Option("Unload All Asi"))
-	{
-		g_AdditionalThread.RemoveAllScripts();
-		g_ScriptThread.RemoveAllScripts();
-	}
 	if (menu.Option("Reload All Asi Mods"))
 	{
 		ASILoader::Initialize();
@@ -706,12 +701,8 @@ void main()
 
 
 	mainInit();
-
-
-
 	//TODO:need to change to another way
 	DrawBigMsg("SHOW_MISSION_PASSED_MESSAGE", "Project X Loaded");
-
 	showNotification("This menu is total Free");
 	while (true)
 	{

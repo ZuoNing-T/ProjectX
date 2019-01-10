@@ -12,6 +12,7 @@ void LoadTargetPlugins(const std::string asi)
 		LOG_ERROR("\tFailed to load image");
 		return;
 	}
+
 	if (HMODULE module = LoadLibrary(asi.c_str()))
 	{
 		LOG_PRINT("\tLoaded \"%s\" => 0x%p", fileData.cFileName, module);

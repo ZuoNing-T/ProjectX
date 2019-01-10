@@ -11,7 +11,7 @@
 #include "..\..\SDK\inc\enums.h"
 #include "../Menu/UI/Script.h"
 
-
+#include "..\globalHandle.h"
 
 
 

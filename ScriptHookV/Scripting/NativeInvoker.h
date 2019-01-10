@@ -254,7 +254,7 @@ namespace rage
 	static uint32_t*(*FileRegister)(int*, const char*, bool, const char*, bool) = "48 89 5c 24 10 48 89 74 24 18 57 48 81 ec ?? ?? ?? ?? 48 8b 01"_Scan.add(117).rip(4).as<decltype(FileRegister)>();
 	static int64_t(*GetGtaSwapChain)() = "48 8B 05 ? ? ? ? C3 48 8B C1 8D 4A 0E"_Scan.as<decltype(GetGtaSwapChain)>();
 
-	FORCEINLINE void GET_SCREEN_RESOLUTION(int* x, int* y) { NativeInvoker::invoke<Void>(0x888D57E407E63624, x, y); }
+	/*FORCEINLINE void GET_SCREEN_RESOLUTION(int* x, int* y) { NativeInvoker::invoke<Void>(0x888D57E407E63624, x, y); }
 	FORCEINLINE void SET_TEXT_OUTLINE() { NativeInvoker::invoke<Void>(0x2513DFB0FB8400FE); }
 	FORCEINLINE void SET_TEXT_WRAP(float start, float end) { NativeInvoker::invoke<Void>(0x63145D9C883A1A70, start, end); }
 	FORCEINLINE void SET_TEXT_SCALE(float p0, float size) { NativeInvoker::invoke<Void>(0x07C837F9A01C34C9, p0, size); }
@@ -268,7 +268,19 @@ namespace rage
 
 	FORCEINLINE bool DOES_TEXT_LABEL_EXIST(const char* gxt) { return NativeInvoker::invoke<bool>(0xAC09CA973C564252, gxt); }
 	FORCEINLINE void _SET_NOTIFICATION_TEXT_ENTRY(const char* type) { NativeInvoker::invoke<Void>(0x202709F4C58A0424, type); }
-	FORCEINLINE int _DRAW_NOTIFICATION(bool blink, bool p1) { return NativeInvoker::invoke<int>(0x2ED7843F8F801023, blink, p1); }
+	FORCEINLINE int _DRAW_NOTIFICATION(bool blink, bool p1) { return NativeInvoker::invoke<int>(0x2ED7843F8F801023, blink, p1); }*/
+}
+
+namespace patched
+{
+
+	static uint32_t*(*trigger_script_event)(int eventGroup, Any* args, int argCount, int bit) = "48 8B C4 48 89 58 08 48 89 68 10 48 89 70 18 48 89 78 20 41 56 48 81 EC ? ? ? ? 45 8B F0 41 8B F9"_Scan.as<decltype(trigger_script_event)>();
+	static uint32_t*(*get_event_data)(int eventGroup, int eventIndex, int* argStruct, int argStructSize) = " 48 89 5C 24 ? 57 48 83 EC 20 49 8B F8 4C 8D 05 ? ? ? ?"_Scan.as<decltype(get_event_data)>(); //Get event data
+	static uint32_t*(*STAT_SET_INT)(Hash statName, int value, BOOL save) = " 48 89 5C 24 ? 48 89 74 24 ? 89 54 24 10 55 57 41 57"_Scan.as<decltype(STAT_SET_INT)>();
+	static uint32_t*(*STAT_SET_FLOAT)(Hash statName, float value, BOOL save) = " 48 89 5C 24 ? F3 0F 11 4C 24 ? 57 48 83 EC 40"_Scan.as<decltype(STAT_SET_FLOAT)>();
+	static uint32_t*(*STAT_SET_BOOL)(Hash statName, bool value, BOOL save) = " 48 89 5C 24 ? 88 54 24 10 57 48 83 EC 40"_Scan.as<decltype(STAT_SET_BOOL)>();
+	static uint32_t*(*GET_PED_LAST_WEAPON_IMPACT_COORD)(Ped ped, Vector3* coords) = "4C 63 0A 48 8B 41 10"_Scan.as<decltype(GET_PED_LAST_WEAPON_IMPACT_COORD)>();
+	static Player(*PLAYER_ID)() = "E9 ? ? ? ? 58 5B C3 E9 ? ? ? ? 33"_Scan.as<decltype(PLAYER_ID)>();
 }
 
 #endif // __NATIVE_INVOKER_H__

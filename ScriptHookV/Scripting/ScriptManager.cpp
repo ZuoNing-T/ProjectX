@@ -221,26 +221,26 @@ namespace ScriptManager
 	Vector2 GetResolution()
 	{
 		int scr_w, scr_h;
-		rage::GET_SCREEN_RESOLUTION(&scr_w, &scr_h);
+		//rage::GET_SCREEN_RESOLUTION(&scr_w, &scr_h);
 		return Vector2((float)scr_w, (float)scr_h);
 	}
 	  
 	void DrawScrText(const std::string& text, Vector2 pos, float scale, int font, const int rgba[4], bool outline, bool center)
 	{
-		rage::SET_TEXT_FONT(font);
-		rage::SET_TEXT_SCALE(scale, scale);
-		rage::SET_TEXT_COLOUR(rgba[0], rgba[1], rgba[2], rgba[3]);
-		rage::SET_TEXT_WRAP(0.f, 1.f);
-		rage::SET_TEXT_CENTRE(center);
-		if (outline) rage::SET_TEXT_OUTLINE();
+		//rage::SET_TEXT_FONT(font);
+		//rage::SET_TEXT_SCALE(scale, scale);
+		//rage::SET_TEXT_COLOUR(rgba[0], rgba[1], rgba[2], rgba[3]);
+		//rage::SET_TEXT_WRAP(0.f, 1.f);
+		//rage::SET_TEXT_CENTRE(center);
+		//if (outline) rage::SET_TEXT_OUTLINE();
 
-		rage::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("CELL_EMAIL_BCON");
-		for (std::size_t i = 0; i < text.size(); i += 99)
-		{
-			rage::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(text.c_str() + i);
-		}
+		//rage::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("CELL_EMAIL_BCON");
+		//for (std::size_t i = 0; i < text.size(); i += 99)
+		//{
+		//	rage::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(text.c_str() + i);
+		//}
 
-		rage::END_TEXT_COMMAND_DISPLAY_TEXT(pos.x, pos.y, 0);
+		//rage::END_TEXT_COMMAND_DISPLAY_TEXT(pos.x, pos.y, 0);
 	}
 
 	void WndProc(HWND /*hwnd*/, UINT uMsg, WPARAM wParam, LPARAM lParam)

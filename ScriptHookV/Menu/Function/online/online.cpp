@@ -6,7 +6,7 @@
 #include "../../Function/online/online.h"
 #include "../../Menu/UI/Script.h"
 #include "../../Menu/Function/Weapon/weapon.h"
-#include "../../Patched/Patched.h"
+#include "..\..\Scripting\NativeInvoker.h"
 
 #include <vector>
 #pragma execution_character_set("utf-8")

@@ -29,15 +29,6 @@ NativeHandler NativeInvoker::GetNativeHandler(uint64_t hash)
 {
 	HashMapTuple tuple = NativeInvoker::GetNativeTuple(hash);
 
-	if (g_IsRetail)
-	{
-		// Direct to handler without accessing the NativeRegistrationTable
-		if (auto offSet = std::get<HashMapIndice::HMT_OFF>(tuple))
-		{
-			return mem::module::main().base().add(offSet).as<NativeHandler>();
-		}
-	}
-
 	if (auto newHash = std::get<HashMapIndice::HMT_NEW>(tuple))
 	{
 		return pGetNativeHandler(NativeRegistrationTable, newHash);

@@ -98,9 +98,6 @@
     <ClCompile Include="Menu\Function\Weapon\weapon.cpp">
       <Filter>Menu\Function\Weapon</Filter>
     </ClCompile>
-    <ClCompile Include="Menu\Patched\Patched.cpp">
-      <Filter>Menu\Patched Options</Filter>
-    </ClCompile>
     <ClCompile Include="Menu\Function\online\online.cpp">
       <Filter>Menu\Function\Online</Filter>
     </ClCompile>
@@ -242,9 +239,6 @@
     <ClInclude Include="Menu\Function\Weapon\weapon.h">
       <Filter>Menu\Function\Weapon</Filter>
     </ClInclude>
-    <ClInclude Include="Menu\Patched\Patched.h">
-      <Filter>Menu\Patched Options</Filter>
-    </ClInclude>
     <ClInclude Include="Menu\Function\Vehicle\VehHash.h">
       <Filter>Menu\Function\Vehicle</Filter>
     </ClInclude>
@@ -260,6 +254,7 @@
     <ClInclude Include="Menu\Function\Vehicle\Mods.h">
       <Filter>Menu\Function\Vehicle</Filter>
     </ClInclude>
+    <ClInclude Include="globalHandle.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />

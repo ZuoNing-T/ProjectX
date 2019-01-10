@@ -5,7 +5,6 @@
 #include "DirectX\D3d11Hook.h"
 #include "Utility\Versioning.h"
 #include "..\SDK\inc\enums.h"
-#include "..\SDK\inc\main.h"
 
 using namespace Utility;
 
@@ -19,15 +18,6 @@ BOOL APIENTRY DllMain( HINSTANCE hModule, DWORD dwReason, LPVOID /*lpvReserved*/
 		{
 			SetOurModuleHandle(hModule);
 			Utility::GetLog()->Clean();
-			// no launcher check
-			//if (auto p_launcherCheck = "E8 ? ? ? ? 84 C0 75 0C B2 01 B9 2F"_Scan) p_launcherCheck.nop(21);
-			//
-			//// no legals
-			//if (auto p_gameLegals = "72 1F E8 ? ? ? ? 8B 0D"_Scan) p_gameLegals.nop(2);
-
-			// no annoying movie
-			// this doesn't save any loadup time just plays nothing
-			//if (auto p_preMovie = "70 6C 61 74 66 6F 72 6D 3A 2F 6D 6F 76"_Scan) p_preMovie.nop(13);
 
 			static auto& versionTool = GTAVersion::GetInstance();
 			g_GameVersion = versionTool.GameVersion();

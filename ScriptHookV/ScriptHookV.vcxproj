@@ -134,7 +134,6 @@
     <ClCompile Include="Menu\MenuBase\menukeyboard.cpp" />
     <ClCompile Include="Menu\MenuBase\menusettings.cpp" />
     <ClCompile Include="Menu\MenuBase\menuutils.cpp" />
-    <ClCompile Include="Menu\Patched\Patched.cpp" />
     <ClCompile Include="Menu\Path\Path.cpp" />
     <ClCompile Include="Menu\UI\Script.cpp" />
     <ClCompile Include="Scripting\Pools.cpp" />
@@ -155,6 +154,7 @@
     <ClInclude Include="..\SDK\inc\types.h" />
     <ClInclude Include="ASI Loader\ASILoader.h" />
     <ClInclude Include="DirectX\D3d11Hook.h" />
+    <ClInclude Include="globalHandle.h" />
     <ClInclude Include="Hooking\Hooking.h" />
     <ClInclude Include="Input\InputHook.h" />
     <ClInclude Include="Menu\3rd\json.hpp" />
@@ -184,7 +184,6 @@
     <ClInclude Include="Menu\MenuBase\menusettings.h" />
     <ClInclude Include="Menu\MenuBase\menuutils.h" />
     <ClInclude Include="Menu\MenuBase\Scaleform.h" />
-    <ClInclude Include="Menu\Patched\Patched.h" />
     <ClInclude Include="Menu\Path\Paths.h" />
     <ClInclude Include="Menu\UI\Script.h" />
     <ClInclude Include="Scripting\Pools.h" />

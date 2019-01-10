@@ -1,7 +1,6 @@
 #include "../../internal_native.h"
 #include "weapon.h"
 #include "../Function.h"
-#include "../../Patched/Patched.h"
 #include "../Vehicle/VehHash.h"
 #include "../../ScriptHookV.h"
 #include "../../MenuBase/menu.h"

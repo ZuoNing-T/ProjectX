@@ -27,6 +27,7 @@ constexpr std::pair<eGameVersion, const char*> versionTable[]
 { VER_1_0_1365_1_STEAM, ("1.0.1365.1") },
 { VER_1_0_1493_0_STEAM, ("1.0.1493.0") },
 { VER_1_0_1493_1_STEAM, ("1.0.1493.1") },
+{ VER_1_0_1604_0_STEAM, ("1.0.1604.0") },
 };
 
 int GTAVersion::ReadVersionString()

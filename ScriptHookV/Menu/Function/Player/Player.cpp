@@ -5,6 +5,7 @@
 #include "../keyboard.h"
 #include "../../Utility/Pattern.h"
 #include "../../Scripting/ScriptEngine.h"
+#include "..\..\globalHandle.h"
 
 namespace PlayerOption
 {

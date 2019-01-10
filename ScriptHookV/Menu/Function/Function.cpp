@@ -378,7 +378,6 @@ void DrawBigMsg(std::string functionname, std::string msg, std::string msg2 )
 	while (timeGetTime() - tick < 3000)
 	{
 		Handle = GRAPHICS::REQUEST_SCALEFORM_MOVIE("MP_BIG_MESSAGE_FREEMODE");
-
 		// Open Data Slot Function
 		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Handle, (char*)functionname.c_str());
 		// Set Data Slot Value/Parameter
