@@ -16,6 +16,8 @@ namespace Utility
 		~PEImage();
 
 		bool			Load( const std::string & path );
+		bool			IsAsiCompatible();
+		bool			PatchCompatibility();
 
 	private:
 

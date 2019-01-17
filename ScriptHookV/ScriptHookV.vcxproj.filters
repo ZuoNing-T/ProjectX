@@ -259,6 +259,7 @@
   <ItemGroup>
     <None Include="..\README.md" />
     <None Include="packages.config" />
+    <None Include="cpp.hint" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="LICENSE-ntauthority.txt" />

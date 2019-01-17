@@ -12,7 +12,22 @@ void LoadTargetPlugins(const std::string asi)
 		LOG_ERROR("\tFailed to load image");
 		return;
 	}
+	// Image not compatible, needs patching
+	if (!pluginImage.IsAsiCompatible()) {
 
+		LOG_PRINT("\tDetected non compatible image. Patching compatibility");
+
+		if (pluginImage.PatchCompatibility()) {
+
+			LOG_PRINT("\tSuccessfully patched");
+
+		}
+		else {
+
+			LOG_ERROR("\tFailed to patch compatibility");
+			return;
+		}
+	}
 	if (HMODULE module = LoadLibrary(asi.c_str()))
 	{
 		LOG_PRINT("\tLoaded \"%s\" => 0x%p", fileData.cFileName, module);

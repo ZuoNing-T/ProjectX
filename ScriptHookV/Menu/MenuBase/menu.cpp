@@ -45,7 +45,6 @@ namespace NativeMenu {
 	}
 	void Menu::SaveSettings()
 	{
-		LOG_MENU("Save Setting");
 		settings.SaveSettings(&controls, this);
 	}
 	void Menu::ReadSettings() {
@@ -235,8 +234,8 @@ namespace NativeMenu {
 	bool Menu::Option(std::string option, std::vector<std::string> details, bool isTranslate, bool isprivate) {
 		//TODO: complete Translate 
 
-		std::string optiontext = /*isTranslate ? getTranslateion(option) :*/ option;
-		if (isprivate)optiontext = "~HUD_COLOUR_GOLD~[VIP]~w~ " + optiontext;
+		std::string optiontext =/* isTranslate ? getTranslateion(option) : */option;
+		if (isprivate)optiontext = "~HUD_COLOUR_GOLD~[Personal Option]~w~ " + optiontext;
 		//std::string optiondetail = isTranslate? 
 		return Option(optiontext, optionsBackgroundSelectColor, details, isprivate);
 	}

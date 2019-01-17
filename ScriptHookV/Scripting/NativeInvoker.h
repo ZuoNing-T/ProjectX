@@ -275,6 +275,7 @@ namespace patched
 {
 
 	static uint32_t*(*trigger_script_event)(int eventGroup, Any* args, int argCount, int bit) = "48 8B C4 48 89 58 08 48 89 68 10 48 89 70 18 48 89 78 20 41 56 48 81 EC ? ? ? ? 45 8B F0 41 8B F9"_Scan.as<decltype(trigger_script_event)>();
+	static uint32_t*(*SET_SESSION_WEATHER)(int, int, int, int) = "48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC 30 40 8A E9"_Scan.as<decltype(SET_SESSION_WEATHER)>();
 	static uint32_t*(*get_event_data)(int eventGroup, int eventIndex, int* argStruct, int argStructSize) = " 48 89 5C 24 ? 57 48 83 EC 20 49 8B F8 4C 8D 05 ? ? ? ?"_Scan.as<decltype(get_event_data)>(); //Get event data
 	static uint32_t*(*STAT_SET_INT)(Hash statName, int value, BOOL save) = " 48 89 5C 24 ? 48 89 74 24 ? 89 54 24 10 55 57 41 57"_Scan.as<decltype(STAT_SET_INT)>();
 	static uint32_t*(*STAT_SET_FLOAT)(Hash statName, float value, BOOL save) = " 48 89 5C 24 ? F3 0F 11 4C 24 ? 57 48 83 EC 40"_Scan.as<decltype(STAT_SET_FLOAT)>();

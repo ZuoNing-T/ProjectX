@@ -761,7 +761,7 @@ namespace NativeMenu {
 				if (var > max) var = min;
 			}
 
-			if (!isprivate&&optionpress && currentoption == optioncount)
+			if (optionpress && currentoption == optioncount)
 				return true;
 			return false;
 		}

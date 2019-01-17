@@ -73,13 +73,14 @@
       <AdditionalLibraryDirectories>$(ProjectDir)detours\lib.X64;$(ProjectDir)StackWalker\lib\Release;$(ProjectDir)DirectX\DirectXTK\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>detours.lib;d3d11.lib;d3dcompiler.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(TargetPath)</OutputFile>
-      <ImportLibrary>$(OutDir)ScriptHookV.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)ProjectX.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(OutDir)ScriptHookV.lib" "$(ProjectDir)..\SDK\lib\" /Y</Command>
+      <Command>xcopy "$(OutDir)ProjectX.dll" "D:\GTATesting\" /Y</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if not exist "$(OutDir)Asi" mkdir "$(OutDir)Asi"</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='De|x64'">
@@ -200,6 +201,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />
+    <None Include="cpp.hint" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

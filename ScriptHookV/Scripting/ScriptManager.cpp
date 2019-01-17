@@ -42,8 +42,11 @@ LONG WINAPI ExpFilter(EXCEPTION_POINTERS* pExp, DWORD /*dwExpCode*/)
 	sw.ShowCallstack(GetCurrentThread(), pExp->ContextRecord);
 	return EXCEPTION_EXECUTE_HANDLER;
 }
-
+#ifndef DLL_EXPORT
 #define DLL_EXPORT __declspec( dllexport )
+#endif // !DLL_EXPORT
+
+
 
 using namespace NativeInvoker::Helper;
 ScriptThread	g_MenuThread;

@@ -4,11 +4,12 @@
 #include <string>
 #include "enums.h"
 
+#ifndef IMPORT
 #define IMPORT __declspec(dllimport)
-
 /*Input*/
 typedef void(*TWndProcFn)(UINT, WPARAM, LPARAM);
 IMPORT void WndProcHandlerRegister(TWndProcFn handler);
+
 IMPORT void WndProcHandlerUnregister(TWndProcFn handler);
 
 /* keyboard */
@@ -60,3 +61,7 @@ IMPORT eGameVersion  getGameVersion();
 /* misc */
 IMPORT BYTE *getScriptHandleBaseAddress(int handle);
 IMPORT int registerRawStreamingFile(const std::string& fileName, const std::string& registerAs);
+#endif // !IMPORT
+
+
+

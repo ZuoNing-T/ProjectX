@@ -125,7 +125,7 @@ bool customLoop = false;
 bool MoneyLoopbool = false;
 int tempMoney = 0;
 bool MoneyLoopBool = false;
-void Money(bool islogged, bool add, bool bank, int amount = 10000000)
+void Money(bool islogged, bool add, bool bank, int type, int amount = 10000000)
 {
 	int iVar4 = 2147483647;//never Change..
 	int addId = 1445302971;
@@ -144,7 +144,14 @@ void Money(bool islogged, bool add, bool bank, int amount = 10000000)
 	if (UNK3::_NETWORK_SHOP_BEGIN_SERVICE(&iVar4, 1474183246, transactionid, addId, amount, bank ? 4 : 1))
 		if (UNK3::_NETWORK_SHOP_CHECKOUT_START(iVar4))
 			if (islogged)
-				NETWORKCASH::NETWORK_EARN_FROM_ROCKSTAR(amount);
+				switch (type)
+				{
+				case 0:	NETWORKCASH::NETWORK_EARN_FROM_ROCKSTAR(amount);								break;
+				case 1:	NETWORKCASH::_NETWORK_EARN_FROM_DAILY_OBJECTIVE(amount, "10 Complete", -1);				break;
+				case 2:	NETWORKCASH::NETWORK_EARN_FROM_BETTING(amount, "T");							break;
+				default:
+					break;
+				}
 	STREAMING::REQUEST_NAMED_PTFX_ASSET("scr_ornate_heist");
 	GRAPHICS::_USE_PARTICLE_FX_ASSET_NEXT_CALL("scr_ornate_heist");
 	GRAPHICS::_START_PARTICLE_FX_NON_LOOPED_ON_PED_BONE_2("scr_heist_ornate_banknotes", PLAYER::PLAYER_PED_ID(), 0, 0, 0, 0, 0, 0, 31086, 0.2f, 0, 0, 0);
@@ -190,48 +197,152 @@ void fake_join_msg(int selectplayer, fake_join_msg_type type)
 	Any args[4] = { 729971264,selectplayer,type };
 	patched::trigger_script_event(1, args, 3, 1 << selectplayer);
 }
-void remotemsg(int select)
+
+
+int weather_id = 0;
+int pos = 0;
+int fakeammount = 0;
+int SpamPos = 0;
+std::vector<int> spamMsg =
 {
-	addTitle("remote Message");
+-130461309,
+-302923242,
+-1291682829,
+220726201,
+403111300,
+1360610666,
+1954854628,
+-304814395,
+1913017082,
+-1445591614,
+-1550586884,
+-1432462772,
+2110027654,
+554851531,
+1395926542,
+1446758869,
+-1847667036,
+1095428883,
+-53425260,
+1513549393,
+-2866549,
+-338055497,
+-1794758144,
+631165512,
+-324694967,
+-43727610,
+1641976889,
+-1620534525,
+1082546806,
+-1232283930,
+531679075,
+1055860763,
+-2115279011,
+-1205772980,
+962028193,
+-916417229,
+-996936862,
+1946605908,
+-2042974830,
+-1640328198,
+-1428950535,
+1877019158,
+-452372621,
+747511033,
+1615078849,
+-458328083,
+18508630,
+885668437,
+-900126131,
+702987651,
+436170208,
+-2119652085,
+2012013119,
+1802792608,
+394686232,
+1264507432,
+-1771971111,
+-210487359,
+-48152463,
+-1369961623,
+1583919327,
+1723217930,
+-101215037,
+-1476055326,
+1347970161,
+1615997358,
+1748623315,
+-1402572071,
+-1926407637,
+888337179,
+-2029924498,
+1128583433,
+2128648125,
+931718501,
+-359302762,
+396931208,
+-1622818674,
+};
+void remote(int select)
+{
+	addTitle("Remote Functions");
+	//menu.MenuOption("Trigger_SCRIPT_EVENT_test", "triggertest");
+	//menu.MenuOption("remote Message", "remotemsg");
+	if (menu.Option("Game Clock"))
+	{
+		static uint32_t*(*SET_CLOCK)(int ped, int* coords) = "48 89 5C 24 ? 57 48 83 EC 20 8B F9 48 8B 0D ? ? ? ? 48 8B DA 33 D2"_Scan.as<decltype(SET_CLOCK)>();
+		SET_CLOCK(0, 0);
+	}
+	if (menu.Option("Kick All"))
+	{
+		Any args[4] = { -1662909539,0xD4E735F4B6A956AC,selectplayer ,selectplayer  };
+		int bitset = 0;
+		for (int i = 0; i < 32; i++)
+		{
+			bitset = 1 << i;
+			bitset += 1;
+		}
+		patched::trigger_script_event(1, args, 4, bitset);
+	}
 	if (menu.Option("VIP Notification"))//作战中心位置改变
 	{
-		Any args[4] = { -319074860,selectplayer ,1226312168 ,0 };
+		//	Any args[4] = { -319074860,selectplayer ,1226312168 ,0 };//Global_1377446.f_2
+		Any args[4] = { 566035618,selectplayer ,174677746 ,0 };
+
 		patched::trigger_script_event(1, args, 4, 1 << selectplayer);
 	}
-	if (menu.Option("作战中心位置改变"))//作战中心位置改变
+	if (menu.Option("Change of operations center"))//作战中心位置改变
 	{
-		Any args[4] = { -319074860,selectplayer ,-1650282162 ,0 };
+		//Any args[4] = { -319074860,selectplayer ,-1650282162 ,0 };
+		Any args[4] = { 566035618,selectplayer ,-821275389 ,0 };
 		patched::trigger_script_event(1, args, 4, 1 << selectplayer);
 	}
-	if (menu.Option("转移恐霸"))//转移恐霸
+	if (menu.Option("transfer Msg"))//转移恐霸
 	{
-		Any args[4] = { -319074860,selectplayer ,762099350 ,0 };
+		//Any args[4] = { -319074860,selectplayer ,762099350 ,0 };
+		Any args[4] = { 566035618,selectplayer ,-1099588997 ,0 };
 		patched::trigger_script_event(1, args, 4, 1 << selectplayer);
 	}
 	if (menu.Option("Active Broadcast"))
 	{
-		Any args[4] = { -319074860,selectplayer ,1471084428 ,0 };
+		//Any args[4] = { -319074860,selectplayer ,1471084428 ,0 };
+		Any args[4] = { 566035618,selectplayer ,1383721237 ,0 };
 		patched::trigger_script_event(1, args, 4, 1 << selectplayer);
 	}
 	if (menu.Option("DeActive Broadcast"))
 	{
-		Any args[4] = { -319074860,selectplayer ,-1531883188 ,0 };
+		Any args[4] = { 566035618,selectplayer ,1254298341 ,0 };
 		patched::trigger_script_event(1, args, 4, 1 << selectplayer);
 	}
 	if (menu.Option("Force him Look foward"))
 	{
-		Any args[4] = { -319074860 ,selectplayer,1377126813 ,0 };
+		Any args[4] = { 566035618 ,selectplayer,-1432407380 ,0 };
 		patched::trigger_script_event(1, args, 4, 1 << selectplayer);
 
 	}
-	if (menu.Option("Apartment Invite"))
-	{
-		Any args[2] = { 938665026 ,select };
-		patched::trigger_script_event(1, args, 2, 1 << select);
-	}
 	if (menu.Option("YACHT invite"))//游艇
 	{
-		fake_join_msg(selectplayer, PIM_INVAYACHT);
+		fake_join_msg(selectplayer, PIM_INVAYACHT);//Global_1377446.f_33
 	}
 	if (menu.Option("Office Invite"))//办公室
 	{
@@ -249,68 +360,111 @@ void remotemsg(int select)
 	{
 		fake_join_msg(selectplayer, PIM_INVAGAR);
 	}
-	if (menu.Option("Force To SinglePlayer"))
-	{
-		Any args[4] = { 2101106911, selectplayer, 0, 0 };
-		patched::trigger_script_event(1, args, 4, 1 << selectplayer);
-	}
 	if (menu.Option("CEO Kick"))//解聘
 	{
-		Any args[4] = { 585981075,selectplayer,1,5 };
+		Any args[4] = { -1190833098,selectplayer,1,5 };//Global_1377446.f_523
 		patched::trigger_script_event(1, args, 4, 1 << selectplayer);
 	}
 	if (menu.Option("CEO Ban"))//清理门户
 	{
-		Any args[4] = { 585981075,selectplayer,1,6 };
+		Any args[4] = { -1190833098,selectplayer,1,6 };
 		patched::trigger_script_event(1, args, 4, 1 << selectplayer);
 	}
-}
-void remote(int select)
-{
-	addTitle("Remote Functions");
-	menu.MenuOption("Trigger_SCRIPT_EVENT_test", "triggertest");
-	menu.MenuOption("remote Message", "remotemsg");
-	if (menu.Option("Session Error", { "is working???" }))
+	if (menu.Option("CEO Kick V2"))
 	{
-		Any args[4] = { 570068755,selectplayer };
-		patched::trigger_script_event(1, args, 2, 1 << selectplayer);
+		Any ceokick[4] = { -4156321, selectplayer, 0, 0 };
+		patched::trigger_script_event(1, ceokick, 4, 1 << selectplayer);
 	}
-	if (menu.Option("Crash Target game", { "some time not working as I wish" }))//This is amazing
+	if (menu.Option("CEO Ban V2"))
 	{
-		Any args[4] = { 573498540,selectplayer,1,1 };
-		patched::trigger_script_event(1, args, 4, 1 << selectplayer);
+		Any ceokick[4] = { 360381720, selectplayer, 0, 0 };//Global_1377446.f_545
+		patched::trigger_script_event(1, ceokick, 4, 1 << selectplayer);
+	}
+	menu.IntOption("Session Weather", weather_id, 0, 15);
+	if (menu.Option("Change Weather"))
+	{
+		patched::SET_SESSION_WEATHER(1, weather_id, 76, 0);
 	}
 	if (menu.Option("None Host Kick"))//This is amazing
 	{
-		Any args[3] = { -1076659005,selectplayer,-1 };
+		Any args[3] = { 171220178,selectplayer,-1 };//Global_1377446.f_287
 		patched::trigger_script_event(1, args, 3, 1 << selectplayer);
 	}//-1076659005
-	if (menu.Option("unknown function"))//This is amazing
+	if (menu.Option("Kick to Single player"))
 	{
-		Any args[7] = { -1179251148,selectplayer,0,0,-1,0, NETWORK::_GET_POSIX_TIME() };//0x9A73240B49945C76
-		patched::trigger_script_event(1, args, 7, 1 << selectplayer);
+		Any sp_crash[4] = { -1638105803, selectplayer, 0, 0 };//Global_1377446.f_594
+		patched::trigger_script_event(1, sp_crash, 4, 1 << selectplayer);
 	}
-	if (menu.Option("Unknown Function2"))//This is amazing
+	if (menu.Option("Kick"))
 	{
-		Any args[3] = { 938665026,selectplayer,-1 };
-		patched::trigger_script_event(1, args, 3, 1 << selectplayer);
-	}//
-	if (menu.Option("Invaild"))//This is amazing
-	{
-		Any args[4] = { 539742369,selectplayer,43 ,selectplayer };
-		patched::trigger_script_event(1, args, 4, 1 << selectplayer);
-	}//
-	if (menu.Option("Remote OFF the radar?"))
-	{
-		Any args[3] = { -1274510562,selectplayer,selectplayer };
-		patched::trigger_script_event(1, args, 3, 1 << selectplayer); 
+		Any kick[4] = { 769347061, selectplayer, 0, 0 };//Global_1377446.f_595
+		patched::trigger_script_event(1, kick, 9, 1 << selectplayer);
 	}
-	//
-	if (menu.Option("Remote OFF the radar?"))
+	menu.IntOption("Pos", pos, 1, 115);
+	if (menu.Option("Teleport Him"))
 	{
-		Any args[3] = { -1114893752,selectplayer,selectplayer };
-		patched::trigger_script_event(1, args, 3, 1 << selectplayer);
+		Any teleport[9] = { 1000837481, selectplayer, 0, -1, 1, pos, 0, 0, 0 };//Global_1377446.f_486
+		patched::trigger_script_event(1, teleport, 9, 1 << selectplayer);
 	}
+	if (menu.Option("Infinite Load"))
+	{
+		Any infiniteload[9] = { 1000837481, selectplayer, 0, -1, 1, 115, 0, 0, 0 };
+		patched::trigger_script_event(1, infiniteload, 9, 1 << selectplayer);
+	}
+	if (menu.Option("Send to Mission"))
+	{
+		Any send_to_mission[9] = { -1571039706, selectplayer, 0, 0, 0, -1, 1, 1, 0 };
+		patched::trigger_script_event(1, send_to_mission, 9, 1 << selectplayer);
+	}
+	if (menu.Option("Remote Money"))
+	{
+		//Any args[10] = { -1306381802,selectplayer,0,0,0,0,0,0,0,233 };//Freemode.c line 299705 10args
+		Any args[10] = { -181444979,selectplayer,0,0,0,0,0,0,233,233 };
+		patched::trigger_script_event(1, args, 10, 1 << selectplayer);
+	}
+	menu.IntOption("Fake Msg Param", fakeammount, 0, INT_MAX);
+	if (menu.Option("Fake Money Save Message"))
+	{
+		Any args[14] = { 713068249,selectplayer,/*事件ID*/-1550586884, fakeammount,0,0,0,0,0,0,selectplayer,0,0,0 };
+		patched::trigger_script_event(1, args, 14, 1 << selectplayer);
+	}
+	if (menu.Option("Fake Money Stolen Message"))
+	{
+		Any args[14] = { 713068249,selectplayer,/*事件ID*/-1432462772, fakeammount,0,0,0,0,0,0,selectplayer,0,0,0 };
+		patched::trigger_script_event(1, args, 14, 1 << selectplayer);
+	}
+	if (menu.Option("Fake Money Removed Message"))
+	{
+		Any args[14] = { 713068249,selectplayer,/*事件ID*/2110027654, fakeammount,0,0,0,0,0,0,selectplayer,0,0,0 };
+		patched::trigger_script_event(1, args, 14, 1 << selectplayer);
+	}
+	if (menu.Option("Fake Msg"))
+	{
+		Any args[14] = { 713068249,selectplayer,/*事件ID*/-1476055326, fakeammount,0,0,0,0,0,0,selectplayer,/*指定杀死玩家*/0,0,0 };
+		patched::trigger_script_event(1, args, 14, 1 << selectplayer);
+	}
+	if (menu.Option("Fake Money Removed Message"))
+	{
+		Any args[14] = { 713068249,selectplayer,/*事件ID*/-130461309, fakeammount,0,0,0,0,0,0,selectplayer,0,0,0 };
+		patched::trigger_script_event(1, args, 14, 1 << selectplayer);
+	}
+	if (menu.Option("Fake Money Removed Message"))
+	{
+		Any args[14] = { 713068249,selectplayer,/*事件ID*/-302923242, fakeammount,0,0,0,0,0,0,selectplayer,0,0,0 };
+		patched::trigger_script_event(1, args, 14, 1 << selectplayer);
+	}
+	if (menu.Option("A draw Msg"))
+	{
+		Any args[14] = { 713068249,selectplayer,/*事件ID*/16107197, 1,0,0,0,0,0,0,selectplayer,/*指定杀死玩家*/0,0,0 };
+		patched::trigger_script_event(1, args, 14, 1 << selectplayer);
+	}
+	menu.IntOption("Msg type", SpamPos, 0, spamMsg.size());
+	if (menu.Option("Send Msg"))//Done
+	{
+		Any args[14] = { 713068249,selectplayer,/*事件ID*/spamMsg[SpamPos], 1,0,0,0,0,0,0,selectplayer,/*指定杀死玩家*/0,0,0 };
+		patched::trigger_script_event(1, args, 14, 1 << selectplayer);
+	}
+
 }
 int remotehash = 0;
 int args[20] = { 0 };
@@ -656,7 +810,7 @@ void triggertest(int selectplayer)
 	{
 		Any *r_args = new Any[addtional];
 		r_args[0] = remotehash;
-		
+
 		r_args[1] = selectplayer;
 		for (int j = 0; j < addtional; j++)
 		{
@@ -680,8 +834,8 @@ void triggertest(int selectplayer)
 void player_selected(int select)
 {
 	addTitle(PLAYER::GET_PLAYER_NAME(select));
-	menu.MenuOption("remote", "remote", {},true,true);
-	menu.MenuOption("Attach Options", "attachObjToPlayer", {},true,true);
+	menu.MenuOption("remote", "remote", {}, true, false);
+	menu.MenuOption("Attach Options", "attachObjToPlayer", {}, true, false);
 	if (menu.Option("teleport to him"))TeleportToPlayer(select);
 	menu.BoolOption("Water Loop", waterLoopBool[select]);
 	if (menu.BoolOption("Specter", spectate[select]))
@@ -695,20 +849,44 @@ void player_selected(int select)
 	menu.BoolOption("Shake him CAM", exploder[select]);
 
 }
+int LogPos = 0;
+std::vector<std::string> LogType_str =
+{
+	"rock Start",
+	"Daily Object",
+	"Betting",
+	"no Bad Sport"
+};
 void onlinemoney()
 {
 	addTitle("Money");
 	menu.BoolOption("Add to Bank", isBanked);
 	menu.BoolOption("Deposit Money", isadd);
-	menu.BoolOption("Logged as Rockstar", islogged, {},true,true);
+	menu.BoolOption("Logged as Rockstar", islogged, {}, true, false);
+	menu.StringArray("Logged As..", LogType_str, LogPos);
+
 	if (menu.Option("10M Deposit"))
 	{
-		Money(islogged, true, isBanked);
+		Money(islogged, true, isBanked, 0);
 	}
 	menu.BoolOption("10M Deposit Loop", MoneyLoopbool);
 	menu.BoolOption("15M Deposit", Depoist15MBool);
-	menu.IntOption("Custom Count", tempMoney, 0, 10000000, 1, {},true,true);
-	menu.BoolOption("Custom Loop", customLoop, {},true,false);
+	menu.IntOption("Custom Count", tempMoney, 0, 10000000, 1, {}, true, false);
+	menu.BoolOption("Custom Loop", customLoop, {}, true, false);
+	if (menu.Option("TransFer Money Wallet to Bank"))
+	{
+		int iVar0;
+		STATS::STAT_GET_INT(GAMEPLAY::GET_HASH_KEY("mpply_last_mp_char"), &iVar0, -1);
+		UNK3::_NETWORK_TRANSFER_WALLET_TO_BANK(iVar0, tempMoney);
+		UNK3::_NETWORK_SHOP_CASH_TRANSFER_SET_TELEMETRY_NONCE_SEED();
+	}
+	if (menu.Option("TransFer Money Bank to Wallet"))
+	{
+		int iVar0;
+		STATS::STAT_GET_INT(GAMEPLAY::GET_HASH_KEY("mpply_last_mp_char"), &iVar0, -1);
+		UNK3::_NETWORK_TRANSFER_BANK_TO_WALLET(iVar0, tempMoney);
+		UNK3::_NETWORK_SHOP_CASH_TRANSFER_SET_TELEMETRY_NONCE_SEED();
+	}
 }
 void onlineplayer()
 {
@@ -728,7 +906,7 @@ void onlineplayer()
 void Recovery()
 {
 	addTitle("Recovery");
-	if (menu.Option("Custom RP Value", {},true,true))
+	if (menu.Option("Custom RP Value", {}, true, false))
 	{
 		std::string res = show_keyboard();
 		LOG_DEBUG((char*)res.c_str());
@@ -1872,7 +2050,7 @@ void online()
 	addTitle("online");
 	menu.MenuOption("online player", "onlineplayer");
 	menu.MenuOption("All Player", "allplayer");
-	menu.MenuOption("Remote Protection", "remoteprotect", {"Still in Developing"},true,false);
+	menu.MenuOption("Remote Protection", "remoteprotect", { "Still in Developing" }, true, false);
 	menu.MenuOption("Online Money", "onlinemoney");
 	menu.MenuOption("Recovery", "Recovery");
 }
@@ -1917,7 +2095,7 @@ void update_online_menu()
 	if (menu.CurrentMenu("onlinemoney"))onlinemoney();
 	if (menu.CurrentMenu("Recovery"))Recovery();
 	if (menu.CurrentMenu("remote"))remote(selectplayer);
-	if (menu.CurrentMenu("remotemsg"))remotemsg(selectplayer);
+	//if (menu.CurrentMenu("remotemsg"))remotemsg(selectplayer);
 	if (menu.CurrentMenu("triggertest"))triggertest(selectplayer);
 	if (menu.CurrentMenu("allplayer"))allplayer();
 
@@ -1936,7 +2114,7 @@ void update_online_game()
 		if (spectate[i])specter(i);
 		if (espbool)ESP(i);
 	}
-	MoneyLoopbool ? Money(islogged, isadd, isBanked) : NULL;
+	MoneyLoopbool ? Money(islogged, isadd, isBanked, LogPos) : NULL;
 	Depoist15MBool ? Depoist15M(isBanked) : NULL;
 	customLoop ? Money(islogged, isadd, isBanked, tempMoney) : NULL;
 	if (Orbitalbool)

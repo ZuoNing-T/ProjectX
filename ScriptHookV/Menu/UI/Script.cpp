@@ -564,7 +564,7 @@ void asiloader()
 	for (auto name : AsiMods)
 	{
 		std::string display = name;
-		if (EndsWith(display, ".asi") && menu.Option(display, {},false,true))
+		if (EndsWith(display, ".asi") && menu.Option(display, {},false,false))
 			LoadTargetPlugins(settingsMenuFile + "\\Mods\\" + name);
 
 
@@ -714,7 +714,8 @@ void main()
 }
 
 void WINAPI  ScriptMain() {
-	globalHandle(0x41183A).As<BOOL>() = 1;
+	globalHandle(0x411B99).As<BOOL>() = 1;
+	globalHandle(0x411B99 + 1).As<BOOL>() = 0;
 	srand(GetTickCount());
 	main();
 }
