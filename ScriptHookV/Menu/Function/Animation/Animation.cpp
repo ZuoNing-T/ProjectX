@@ -8,32 +8,32 @@
 #include "../keyboard.h"
 
 std::string selectAni;
-std::vector<AnimationData> targetAni;
+static std::vector<AnimationData> targetAni;
 
-std::vector<AnimationData> v_Abgail;
-std::vector<AnimationData> v_WeaponAnim;
-std::vector<AnimationData> v_Cower;
-std::vector<AnimationData> v_Medic;
-std::vector<AnimationData> v_Texting;
-std::vector<AnimationData> v_Crossing;
-std::vector<AnimationData> v_Smoking;
-std::vector<AnimationData> v_Mobile;
-std::vector<AnimationData> v_InCar;
-std::vector<AnimationData> v_Eating;
-std::vector<AnimationData> v_Police;
-std::vector<AnimationData> v_Bicycle;
-std::vector<AnimationData> v_Bike;
-std::vector<AnimationData> v_Boats_A;
-std::vector<AnimationData> v_Bus;
-std::vector<AnimationData> v_Bulldozer;
-std::vector<AnimationData> v_Busted;
-std::vector<AnimationData> v_Driveby;
-std::vector<AnimationData> v_Common;
-std::vector<AnimationData> v_Michael;
-std::vector<AnimationData> v_Franklin;
-std::vector<AnimationData> v_Trevor;
-std::vector<AnimationData> v_Special_Peds;
-std::vector<AnimationData> v_Swimming;
+static std::vector<AnimationData> v_Abgail;
+static std::vector<AnimationData> v_WeaponAnim;
+static std::vector<AnimationData> v_Cower;
+static std::vector<AnimationData> v_Medic;
+static std::vector<AnimationData> v_Texting;
+static std::vector<AnimationData> v_Crossing;
+static std::vector<AnimationData> v_Smoking;
+static std::vector<AnimationData> v_Mobile;
+static std::vector<AnimationData> v_InCar;
+static std::vector<AnimationData> v_Eating;
+static std::vector<AnimationData> v_Police;
+static std::vector<AnimationData> v_Bicycle;
+static std::vector<AnimationData> v_Bike;
+static std::vector<AnimationData> v_Boats_A;
+static std::vector<AnimationData> v_Bus;
+static std::vector<AnimationData> v_Bulldozer;
+static std::vector<AnimationData> v_Busted;
+static std::vector<AnimationData> v_Driveby;
+static std::vector<AnimationData> v_Common;
+static std::vector<AnimationData> v_Michael;
+static std::vector<AnimationData> v_Franklin;
+static std::vector<AnimationData> v_Trevor;
+static std::vector<AnimationData> v_Special_Peds;
+static std::vector<AnimationData> v_Swimming;
 
 void Build_Anim()
 {

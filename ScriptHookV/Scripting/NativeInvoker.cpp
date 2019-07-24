@@ -8,7 +8,7 @@ NativeArgStack NativeInvoker::Helper::g_Args;
 NativeReturnStack NativeInvoker::Helper::g_Returns;
 scrNativeCallContext NativeInvoker::Helper::g_context(&NativeInvoker::Helper::g_Returns, &NativeInvoker::Helper::g_Args);
 
-void(*scrNativeCallContext::SetVectorResults)(scrNativeCallContext*) = "83 79 18 00 48 8B D1 74 4A FF 4A 18"_Scan.as<decltype(SetVectorResults)>();
+void(*scrNativeCallContext::SetVectorResults)(scrNativeCallContext*) = "83 79 18 00 48 8B D1 74 4A FF 4A 18 48 63 4A 18 48 8D 41 04 48 8B 4C CA"_Scan.as<decltype(SetVectorResults)>();
 void* NativeRegistrationTable = "48 8D 0D ? ? ? ? 48 8B 14 FA E8 ? ? ? ?"_Scan.add(3).rip(4).as<decltype(NativeRegistrationTable)>();
 NativeHandler(*pGetNativeHandler)(void*, uint64_t hash) = "48 8D 0D ? ? ? ? 48 8B 14 FA E8 ? ? ? ?"_Scan.add(12).rip(4).as<decltype(pGetNativeHandler)>();
 
@@ -36,7 +36,7 @@ NativeHandler NativeInvoker::GetNativeHandler(uint64_t hash)
 
 	return nullptr;
 }
-
+//
 void NativeInvoker::DumpNativeList()
 {
 	for (const auto& map : mHashMapTuple)

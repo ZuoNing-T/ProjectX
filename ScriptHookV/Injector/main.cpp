@@ -11,7 +11,7 @@ int main()
 	const std::string exeName = "GTA5.exe";
 
 	//DLL to inject
-	const std::string dllName = "ScriptHookV.dll";
+	const std::string dllName = "ProjectX.dll";
 
 	//Hijack an existing thread ? false = create one
 	bool ThreadHijacking = false;

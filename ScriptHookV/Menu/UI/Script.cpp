@@ -686,10 +686,10 @@ void main()
 
 	menu.RegisterOnMain(std::bind(onMain));
 	menu.RegisterOnExit(std::bind(onExit));
-
+	//menu.SaveSettings();
 	menu.ReadSettings();
 	int textureid = 0;
-	if (Register((settingsMenuFile + "\\ProjectX.ytd").c_str(), "ProjectX.ytd") > 0)menu.Custom = true;
+	//if (Register((settingsMenuFile + "\\ProjectX.ytd").c_str(), "ProjectX.ytd") > 0)menu.Custom = true;
 
 #pragma region Mod Vehicle
 	CreateDirectoryA((settingsMenuFile + "\\Mod Vehicle").c_str(), 0);
@@ -702,8 +702,7 @@ void main()
 
 	mainInit();
 	//TODO:need to change to another way
-	DrawBigMsg("SHOW_MISSION_PASSED_MESSAGE", "Project X Loaded");
-	showNotification("This menu is total Free");
+	//DrawBigMsg("SHOW_MISSION_PASSED_MESSAGE", "Project X Loaded");
 	while (true)
 	{
 		update_menu();
@@ -714,46 +713,8 @@ void main()
 }
 
 void WINAPI  ScriptMain() {
-	globalHandle(0x411B99).As<BOOL>() = 1;
-	globalHandle(0x411B99 + 1).As<BOOL>() = 0;
+	globalHandle(4267883).As<BOOL>() = 1;
+	globalHandle(4267884).As<BOOL>() = 0;
 	srand(GetTickCount());
 	main();
-}
-
-bool iscracked = false;//To check this Auth is cracked
-void WINAPI Auther()//This might not indeed
-{
-	while (true)
-	{
-	//	std::string username = std::to_string(SOCIALCLUB::_SC_GET_NICKNAME());
-		time_t t;
-		struct tm * lt;
-		time(&t);//获取Unix时间戳。
-		lt = localtime(&t);//转为时间结构。
-		if (lt->tm_mday > 12)
-		{
-			showNotification("This version has been Outdate");
-			if (false)return;
-			g_HookState = HookStateExiting;
-			iscracked = false;
-		
-		}
-		else
-		{
-			iscracked = true;
-		}
-		if (false)return;
-
-		Sleep(100);
-		//if this game is cracked this Thread will call some detected Function to make this menu as Detected
-		if (NETWORK::NETWORK_IS_SESSION_ACTIVE() && !iscracked)
-		{
-			if (NETWORK::NETWORK_IS_SESSION_STARTED())
-			{
-				PLAYER::PLAYER_ID();
-			}
-		}
-
-		iscracked = false;
-	}
 }

@@ -417,7 +417,8 @@ void vehupdate()
 void spawnvehicle()
 {
 	addTitle("Vehicle");
-	if (menu.MenuOption("~HUD_COLOUR_DEGEN_RED~Arena", "vehiclelist", { "1.46 Only" })) Vcat = Arena;
+	if (menu.MenuOption("~HUD_COLOUR_DEGEN_RED~Casino", "vehiclelist", { "1.46 Only" })) Vcat = Casino;
+	if (menu.MenuOption("Arena", "vehiclelist", { "1.46 Only" })) Vcat = Arena;
 	if (menu.MenuOption("After Hours", "vehiclelist", { "1.44 Only" })) Vcat = Afterhours;
 	if (menu.MenuOption("1.43Vehicle", "vehiclelist", { "1.43 Only" })) Vcat = DLC;
 	if (menu.MenuOption("Gunrunning", "vehiclelist", { "1.42 Only" }))Vcat = Gunrunning;
@@ -452,6 +453,9 @@ void vehiclelist(VehType cat)
 	addTitle("Vehicle List");
 	switch (cat)
 	{
+	case Casino:
+		currentlist = v_Casino;
+		break;
 	case Arena:
 		currentlist = v_Arena;
 		break;

@@ -698,7 +698,7 @@ namespace NativeMenu {
 
 		//hideHUDComponents();
 		disableKeys();
-		drawInstructionalButtons();
+		//drawInstructionalButtons();
 	}
 
 	void Menu::CheckKeys() {

@@ -7,6 +7,7 @@
 #include "VehHash.h"
 enum VehType
 {
+	Casino,
 	Arena,
 	Afterhours,
 	Gunrunning,

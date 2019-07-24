@@ -1,4 +1,28 @@
 #pragma once
+static std::vector<std::string> v_Casino = {
+"CARACARA2",
+"DRAFTER",
+"DYNASTY",
+"EMERUS",
+"GAUNTLET3",
+"GAUNTLET4",
+"HELLION",
+"ISSI7",
+"JUGULAR",
+"KRIEGER",
+"LOCUST",
+"NEBULA",
+"NEO",
+"NOVAK",
+"PARAGON",
+"PEYOTE2",
+"RROCKET",
+"S80",
+"THRAX",
+"ZORRUSSO",
+"ZION3"
+};
+
 static std::vector<std::string> v_Arena = {
 		"BRUISER",	"BRUISER2",	"BRUISER3",	"BRUTUS",	"BRUTUS2",	"BRUTUS3",	"CERBERUS",
 "CERBERUS2",	"CERBERUS3",	"CLIQUE",	"DEATHBIKE",	"DEATHBIKE2",	"DEATHBIKE3","DEVESTE",
@@ -8,7 +32,7 @@ static std::vector<std::string> v_Arena = {
 "ZR380","ZR3802","ZR3803"
 };
 
-static std::vector<std::string>		v_Afterhours				= {
+static std::vector<std::string>		v_Afterhours = {
 	"BLIMP3",
 	"FREECRAWLER",
 	"MENACER",
@@ -24,64 +48,64 @@ static std::vector<std::string>		v_Afterhours				= {
 	"SWINGER",
 	"TERBYTE",
 };
-static std::vector<std::string>		v_Gunrunning				= {
+static std::vector<std::string>		v_Gunrunning = {
 	"APC","ARDENT","CADDY3","CHEETAH2","DUNE3","HALFTRACK","HAULER2",
 	"INSURGENT3","NIGHTSHARK","OPPRESSOR","PHANTOM3","TAMPA3",
 	"TECHNICAL3","TORERO","TRAILERLARGE","TRAILERS4","TRAILERSMALL2",
 	"VAGNER","XA21"
 };
-static std::vector<std::string>		v_DLC						= {
+static std::vector<std::string>		v_DLC = {
 	"GB200","FAGALOA","ELLIE","MICHELLI","ISSI3","FLASHGT",
 	"HOTRING","TEZERACT","TYRANT","DOMINATOR3","TAIPAN",
 	"ENTITY2","JESTER3","CHEBUREK","CARACARA","SEASPARROW"
 };
-static std::vector<std::string>		v_Boats					= {
+static std::vector<std::string>		v_Boats = {
 	"DINGHY", "DINGHY2", "DINGHY3", "DINGHY4", "JETMAX",
 	"MARQUIS", "PREDATOR", "SEASHARK", "SEASHARK2", "SEASHARK3",
 	"SPEEDER", "SPEEDER2", "SQUALO", "SUBMERSIBLE", "SUBMERSIBLE2",
 	"SUNTRAP", "TORO", "TORO2", "TROPIC", "TROPIC2",
 	"TUG"
 };
-static std::vector<std::string>		v_Commercial				= {
+static std::vector<std::string>		v_Commercial = {
 	"BENSON", "BIFF", "HAULER", "MULE", "MULE2",
 	"MULE3", "PACKER", "PHANTOM", "POUNDER", "STOCKADE",
 	"STOCKADE3"
 };
-static std::vector<std::string>		v_Compacts				= {
+static std::vector<std::string>		v_Compacts = {
 	"BLISTA", "BRIOSO", "DILETTANTE", "DILETTANTE2", "ISSI2",
 	"PANTO", "PRAIRIE", "RHAPSODY"
 };
-static std::vector<std::string>		v_Coupes					= {
+static std::vector<std::string>		v_Coupes = {
 	"COGCABRIO", "EXEMPLAR", "F620", "FELON", "FELON2",
 	"JACKAL", "ORACLE", "ORACLE2", "SENTINEL", "SENTINEL2",
 	"WINDSOR", "WINDSOR2", "ZION", "ZION2"
 };
-static std::vector<std::string>		v_Cycles					= {
+static std::vector<std::string>		v_Cycles = {
 	"BMX", "CRUISER", "FIXTER", "SCORCHER", "TRIBIKE",
 	"TRIBIKE2", "TRIBIKE3"
 };
-static std::vector<std::string>		v_Emergency				= {
+static std::vector<std::string>		v_Emergency = {
 	"AMBULANCE", "FBI", "FBI2", "FIRETRUK", "LGUARD",
 	"PBUS", "PRANGER", "POLICE", "POLICE2", "POLICE3",
 	"POLICE4", "POLICEB", "POLICEOLD1", "POLICEOLD2", "POLICET",
 	"SHERIFF", "SHERIFF2", "RIOT"
 };
-static std::vector<std::string>		v_Helicopters				= {
+static std::vector<std::string>		v_Helicopters = {
 	"ANNIHILATOR", "BLIMP", "BLIMP2", "BUZZARD", "BUZZARD2",
 	"CARGOBOB", "CARGOBOB2", "CARGOBOB3", "CARGOBOB4", "FROGGER",
 	"FROGGER2", "MAVERICK", "POLMAV", "SAVAGE", "SKYLIFT",
 	"SUPERVOLITO", "SUPERVOLITO2", "SWIFT", "SWIFT2", "VALKYRIE",
 	"VALKYRIE2", "VOLATUS"
 };
-static std::vector<std::string>		v_Industrial				= {
+static std::vector<std::string>		v_Industrial = {
 	"BULLDOZER", "CUTTER", "DUMP", "FLATBED", "GUARDIAN",
 	"HANDLER", "MIXER", "MIXER2", "RUBBLE", "TIPTRUCK",
 	"TIPTRUCK2"
 };
-static std::vector<std::string>		v_Military				= {
+static std::vector<std::string>		v_Military = {
 	"BARRACKS", "BARRACKS2", "BARRACKS3", "CRUSADER", "RHINO"
 };
-static std::vector<std::string>		v_Motorcycles				= {
+static std::vector<std::string>		v_Motorcycles = {
 	"AKUMA", "AVARUS", "BAGGER", "BATI", "BATI2",
 	"BF400", "CARBONRS", "CHIMERA", "CLIFFHANGER", "DAEMON",
 	"DAEMON2", "DEFILER", "DOUBLE", "ENDURO", "ESSKEY",
@@ -93,7 +117,7 @@ static std::vector<std::string>		v_Motorcycles				= {
 	"ZOMBIEA", "ZOMBIEB", "DIABLOUS", "DIABLOUS2", "FCR",
 	"FCR2"
 };
-static std::vector<std::string>		v_Muscle					= {
+static std::vector<std::string>		v_Muscle = {
 	"BLADE", "BUCCANEER", "BUCCANEER2", "CHINO", "CHINO2",
 	"COQUETTE3", "DOMINATOR", "DOMINATOR2", "DUKES", "DUKES2",
 	"GAUNTLET", "GAUNTLET2", "FACTION", "FACTION2", "FACTION3",
@@ -103,7 +127,7 @@ static std::vector<std::string>		v_Muscle					= {
 	"STALION", "STALION2", "TAMPA", "VIGERO", "VIRGO",
 	"VIRGO2", "VIRGO3", "VOODOO", "VOODOO2"
 };
-static std::vector<std::string>		v_OffRoad					= {
+static std::vector<std::string>		v_OffRoad = {
 	"BFINJECTION", "BIFTA", "BLAZER", "BLAZER2", "BLAZER3",
 	"BLAZER4", "BODHI2", "BRAWLER", "DLOADER", "DUBSTA3",
 	"DUNE", "DUNE2", "INSURGENT", "INSURGENT2", "KALAHARI",
@@ -112,13 +136,13 @@ static std::vector<std::string>		v_OffRoad					= {
 	"TROPHYTRUCK", "TROPHYTRUCK2", "TECHNICAL2", "DUNE4", "DUNE5",
 	"BLAZER5"
 };
-static std::vector<std::string>		v_Planes					= {
+static std::vector<std::string>		v_Planes = {
 	"BESRA", "CARGOPLANE", "CUBAN800", "DODO", "DUSTER",
 	"HYDRA", "JET", "LAZER", "LUXOR", "LUXOR2",
 	"MAMMATUS", "MILJET", "NIMBUS", "SHAMAL", "STUNT",
 	"TITAN", "VELUM", "VELUM2", "VESTRA"
 };
-static std::vector<std::string>		v_Sedans					= {
+static std::vector<std::string>		v_Sedans = {
 	"ASEA", "ASEA2", "ASTEROPE", "COG55", "COG552",
 	"COGNOSCENTI", "COGNOSCENTI2", "EMPEROR", "EMPEROR2", "EMPEROR3",
 	"FUGITIVE", "GLENDALE", "INGOT", "INTRUDER", "LIMO2",
@@ -127,12 +151,12 @@ static std::vector<std::string>		v_Sedans					= {
 	"STRETCH", "SUPERD", "SURGE", "TAILGATER", "WARRENER",
 	"WASHINGTON"
 };
-static std::vector<std::string>		v_Service					= {
+static std::vector<std::string>		v_Service = {
 	"AIRBUS", "BRICKADE", "BUS", "COACH", "RALLYTRUCK",
 	"RENTALBUS", "TAXI", "TOURBUS", "TRASH", "TRASH2",
 	"WASTELANDER",
 };
-static std::vector<std::string>		v_Sports					= {
+static std::vector<std::string>		v_Sports = {
 	"ALPHA", "BANSHEE", "BESTIAGTS", "BLISTA2", "BLISTA3",
 	"BUFFALO", "BUFFALO2", "BUFFALO3", "CARBONIZZARE", "COMET2",
 	"COQUETTE", "ELEGY", "ELEGY2", "FELTZER2", "FUROREGT", "FUSILADE",
@@ -143,20 +167,20 @@ static std::vector<std::string>		v_Sports					= {
 	"SULTAN", "SURANO", "SPECTER", "SPECTER2", "TAMPA2", "TROPOS", "VERLIERER2",
 	"RUINER2", "PHANTOM2", "RUSTON"
 };
-static std::vector<std::string>		v_SportsClassics			= {
+static std::vector<std::string>		v_SportsClassics = {
 	"BTYPE", "BTYPE2", "BTYPE3", "CASCO", "COQUETTE2",
 	"FELTZER3", "JB700", "MAMBA", "MANANA", "MONROE",
 	"PEYOTE", "PIGALLE", "STINGER", "STINGERGT", "TORNADO",
 	"TORNADO2", "TORNADO3", "TORNADO4", "TORNADO5", "TORNADO6",
 	"ZTYPE", "INFERNUS2", "TURISMO2",
 };
-static std::vector<std::string>		v_Super					= {
+static std::vector<std::string>		v_Super = {
 	"ADDER", "BANSHEE2", "BULLET", "CHEETAH", "ENTITYXF",
 	"FMJ", "SHEAVA", "INFERNUS", "NERO", "NERO2","OSIRIS", "LE7B",
 	"ITALIGTB", "ITALIGTB2", "PFISTER811", "PROTOTIPO", "REAPER", "SULTANRS", "T20",
 	"TEMPESTA", "TURISMOR", "TYRUS", "VACCA", "VOLTIC", "ZENTORNO", "VOLTIC2", "PENETRATOR", "GP1"
 };
-static std::vector<std::string>		v_SUVs					= {
+static std::vector<std::string>		v_SUVs = {
 	"BALLER", "BALLER2", "BALLER3", "BALLER4", "BALLER5",
 	"BALLER6", "BJXL", "CAVALCADE", "CAVALCADE2", "CONTENDER",
 	"DUBSTA", "DUBSTA2", "FQ2", "GRANGER", "GRESLEY",
@@ -164,24 +188,24 @@ static std::vector<std::string>		v_SUVs					= {
 	"PATRIOT", "RADI", "ROCOTO", "SEMINOLE", "SERRANO",
 	"XLS", "XLS2"
 };
-static std::vector<std::string>		v_Trailer					= {
+static std::vector<std::string>		v_Trailer = {
 	"ARMYTANKER", "ARMYTRAILER", "ARMYTRAILER2", "BALETRAILER", "BOATTRAILER",
 	"DOCKTRAILER", "FREIGHTTRAILER", "GRAINTRAILER", "PROPTRAILER", "RAKETRAILER",
 	"TANKER", "TANKER2", "TR2", "TR3", "TR4",
 	"TRAILERLOGS", "TRAILERS", "TRAILERS2", "TRAILERS3", "TRAILERSMALL",
 	"TRFLAT", "TVTRAILER"
 };
-static std::vector<std::string>		v_Trains					= {
+static std::vector<std::string>		v_Trains = {
 	"CABLECAR", "FREIGHT", "FREIGHTCAR", "FREIGHTCONT1", "FREIGHTCONT2",
 	"FREIGHTGRAIN", "METROTRAIN", "TANKERCAR"
 };
-static std::vector<std::string>		v_Utilitys				= {
+static std::vector<std::string>		v_Utilitys = {
 	"AIRTUG", "CADDY", "CADDY2", "DOCKTUG", "FORKLIFT",
 	"MOWER", "RIPLEY", "SADLER", "SADLER2", "SCRAP",
 	"TOWTRUCK", "TOWTRUCK2", "TRACTOR", "TRACTOR2", "TRACTOR3",
 	"UTILLITRUCK", "UTILLITRUCK2", "UTILLITRUCK3"
 };
-static std::vector<std::string>		v_Vans					= {
+static std::vector<std::string>		v_Vans = {
 	"BISON", "BISON2", "BISON3", "BOBCATXL", "BOXVILLE",
 	"BOXVILLE2", "BOXVILLE3", "BOXVILLE4", "BURRITO", "BURRITO2",
 	"BURRITO3", "BURRITO4", "BURRITO5", "CAMPER", "GBURRITO",
@@ -190,7 +214,7 @@ static std::vector<std::string>		v_Vans					= {
 	"SPEEDO", "SPEEDO2", "SURFER", "SURFER2", "TACO",
 	"YOUGA", "YOUGA2"
 };
-static std::vector<std::string>		v_FavVehicles				= {
+static std::vector<std::string>		v_FavVehicles = {
 	"TROPHYTRUCK",
 	"TROPHYTRUCK2",
 	"KURUMA",
