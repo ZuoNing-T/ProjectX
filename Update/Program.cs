@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
+using System.Xml;
 
 namespace Update
 {
@@ -18,7 +20,8 @@ namespace Update
             public string version { set; get; }
 
         }
-        static void Main(string[] args)
+
+        public static void UpdateCrossMap()
         {
             int couter = 0;
             Dictionary<string, CrossData> data = new Dictionary<string, CrossData>();
@@ -128,6 +131,34 @@ namespace Update
                 }
             }
             Console.WriteLine("DOne {0}", couter);
+        }
+
+        public static void ParsePedData(string fileName)
+        {
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(fileName);
+            XmlNode root = xmlDoc.SelectSingleNode("CPedModelInfo__InitDataList").SelectSingleNode("InitDatas");
+            XmlNodeList nodeList = root.ChildNodes;
+            foreach (XmlNode item in nodeList)
+            {
+                Console.WriteLine($"\"{item.SelectSingleNode("Name").InnerText}\",");
+            }
+
+        }
+        public static void ParseVehData(string fileName)
+        {
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(fileName);
+            XmlNode root = xmlDoc.SelectSingleNode("ShopVehicleDataArray").SelectSingleNode("Vehicles");
+            XmlNodeList nodeList = root.ChildNodes;
+            foreach (XmlNode item in nodeList)
+            {
+                Console.WriteLine($"\"{item.SelectSingleNode("textLabel").InnerText}\",");
+            }
+        }
+        static void Main(string[] args)
+        {
+            ParseVehData("Vehicle.xml");
             Console.ReadKey();
         }
     }

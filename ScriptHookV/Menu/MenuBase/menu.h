@@ -30,7 +30,7 @@ namespace NativeMenu {
 		 * Calling this is pretty much mandatory. It's advised to call this just once after
 		 * figuring out the directory structure.
 		 */
-		void SetFiles(const std::string & fileName);
+		void SetFiles(const std::string& fileName);
 
 		/*
 		 * Read settings file. If no specified settings file, it'll use default settings.
@@ -92,8 +92,8 @@ namespace NativeMenu {
 		 * Returns true on accept.
 		 */
 
-		bool Option(std::string option, std::vector<std::string> details = {}, bool isTranslate = true,  bool isprivate = false);
-		bool Option(std::string option, Color highlight, std::vector<std::string> details = {},  bool isprivate = false);
+		bool Option(std::string option, std::vector<std::string> details = {}, bool isTranslate = true, bool isprivate = false);
+		bool Option(std::string option, Color highlight, std::vector<std::string> details = {}, bool isprivate = false);
 
 		/*
 		 * Submenu option.
@@ -114,7 +114,7 @@ namespace NativeMenu {
 		 * "highlighted" indicates the highlight status of the option. It can be a nullptr.
 		 * Returns true on accept.
 		 */
-		bool OptionPlus(std::string option, std::vector<std::string> &extra, bool *highlighted = nullptr,
+		bool OptionPlus(std::string option, std::vector<std::string>& extra, bool* highlighted = nullptr,
 			std::function<void()> onRight = nullptr, std::function<void()> onLeft = nullptr,
 			std::string title = "Info", std::vector<std::string> details = {});
 
@@ -123,28 +123,28 @@ namespace NativeMenu {
 		 * the extra text is costful or if no other things are needed. Running this when
 		 * OptionPlus is highlighted can improve performance.
 		 */
-		void OptionPlusPlus(std::vector<std::string> &extra, std::string title = "Info");
+		void OptionPlusPlus(std::vector<std::string>& extra, std::string title = "Info");
 
 		/*
 		 * Option that changes an int value with optional custom-sized steps.
 		 * Shows option with the value inside < > brackets.
 		 * Returns true on accept, left and right.
 		 */
-		bool IntOption(std::string option, int &var, int min, int max, int step = 1, std::vector<std::string> details = {},  bool isTranslate = true, bool isprivate = false);
+		bool IntOption(std::string option, int& var, int min, int max, int step = 1, std::vector<std::string> details = {}, bool isTranslate = true, bool isprivate = false);
 
 		/*
 		 * Option that changes a float value with optional custom-sized steps.
 		 * Shows option with the value inside < > brackets.
 		 * Returns true on accept, left and right.
 		 */
-		bool FloatOption(std::string option, float &var, float min, float max, float step = 0.1f, std::vector<std::string> details = {}, bool isTranslate = true, bool isprivate = false);
+		bool FloatOption(std::string option, float& var, float min, float max, float step = 0.1f, std::vector<std::string> details = {}, bool isTranslate = true, bool isprivate = false);
 
 		/*
 		 * Option that toggles a boolean.
 		 * Shows option with a checkbox, which is checked when the passed var is "true".
 		 * Returns true on accept.
 		 */
-		bool BoolOption(std::string option, bool &var, std::vector<std::string> details = {}, bool isTranslate = true, bool isprivate = false);
+		bool BoolOption(std::string option, bool& var, std::vector<std::string> details = {}, bool isTranslate = true, bool isprivate = false);
 
 		/*
 		 * Option that displays a boolean with a specifyable texture.
@@ -160,7 +160,7 @@ namespace NativeMenu {
 		 * On left or right press, iterator's value is incremented or decremented.
 		 * Returns true on accept, left and right.
 		 */
-		bool IntArray(std::string option, std::vector<int> display, int &iterator, std::vector<std::string> details = {}, bool isTranslate = true, bool isprivate = false);
+		bool IntArray(std::string option, std::vector<int> display, int& iterator, std::vector<std::string> details = {}, bool isTranslate = true, bool isprivate = false);
 
 		/*
 		 * Option that shows a scrollable list of supplied floats.
@@ -169,7 +169,7 @@ namespace NativeMenu {
 		 * On left or right press, iterator's value is incremented or decremented.
 		 * Returns true on accept, left and right.
 		 */
-		bool FloatArray(std::string option, std::vector<float> display, int &iterator, std::vector<std::string> details = {}, bool isTranslate = true, bool isprivate = false);
+		bool FloatArray(std::string option, std::vector<float> display, int& iterator, std::vector<std::string> details = {}, bool isTranslate = true, bool isprivate = false);
 
 		/*
 		 * Option that shows a scrollable list of supplied strings.
@@ -178,7 +178,7 @@ namespace NativeMenu {
 		 * On left or right press, iterator's value is incremented or decremented.
 		 * Returns true on accept, left and right.
 		 */
-		bool StringArray(std::string option, std::vector<std::string> display, int &iterator, std::vector<std::string> details = {}, bool isTranslate = true, bool isprivate = false);
+		bool StringArray(std::string option, std::vector<std::string> display, int& iterator, std::vector<std::string> details = {}, bool isTranslate = true, bool isprivate = false);
 		void drawInstructionalButtons();
 		void drawMenuDetails();
 
@@ -210,7 +210,7 @@ namespace NativeMenu {
 		 * Returns the filled in menu controls. This can be used for display or
 		 * input verification purposes.
 		 */
-		const MenuControls &GetControls();
+		const MenuControls& GetControls();
 
 		/*
 		 * Returns true if this instance of the menu is open
@@ -536,7 +536,23 @@ namespace NativeMenu {
 			"shopui_title_tattoos4",
 			"shopui_title_tattoos5",
 			"shopui_title_tennis",
-			"suemurry_background_left"
+			"suemurry_background_left",
+			"casinoui_cards_blackjack",
+			"casinoui_cards_blackjack_high",
+			"casinoui_cards_three",
+			"casinoui_cards_three_high",
+			"casinoui_insidetrack",
+			"casinoui_lucky_wheel",
+			"casinoui_roulette",
+			"casinoui_roulette_high",
+			"casinoui_slots_angel",
+			"casinoui_slots_deity",
+			"casinoui_slots_diamond",
+			"casinoui_slots_evacuator",
+			"casinoui_slots_fame",
+			"casinoui_slots_impotent",
+			"casinoui_slots_knife",
+			"casinoui_slots_ranger",
 		};
 		const std::vector<std::string> textureDicts = {
 			"",
@@ -579,7 +595,23 @@ namespace NativeMenu {
 			"shopui_title_tattoos3",
 			"shopui_title_tattoos4",
 			"shopui_title_tattoos5",
-			"shopui_title_tennis"
+			"shopui_title_tennis",
+			"casinoui_cards_blackjack",
+			"casinoui_cards_blackjack_high",
+			"casinoui_cards_three",
+			"casinoui_cards_three_high",
+			"casinoui_insidetrack",
+			"casinoui_lucky_wheel",
+			"casinoui_roulette",
+			"casinoui_roulette_high",
+			"casinoui_slots_angel",
+			"casinoui_slots_deity",
+			"casinoui_slots_diamond",
+			"casinoui_slots_evacuator",
+			"casinoui_slots_fame",
+			"casinoui_slots_impotent",
+			"casinoui_slots_knife",
+			"casinoui_slots_ranger"
 		};
 
 		static const unsigned maxMenus = 255;
@@ -673,7 +705,7 @@ namespace NativeMenu {
 		float headerHeight = 0.0f;
 
 		FooterType footerType = FooterType::Sprite;
-		Color footerColor = { 255,255,255,255};
+		Color footerColor = { 255,255,255,255 };
 		Sprite footerSprite;
 		float aspectR = 16.0f / 9.0f;
 
@@ -713,16 +745,16 @@ namespace NativeMenu {
 		 * Functions! Should be self-explanatory.
 		 */
 		float getStringWidth(std::string text, float scale, int font);
-		std::vector<std::string> splitString(float maxWidth, std::string &details, float scale, int font);
+		std::vector<std::string> splitString(float maxWidth, std::string& details, float scale, int font);
 		void drawText(const std::string text, int font, float x, float y, float pUnknown, float scale, Color color, int justify);
 		void drawRect(float x, float y, float width, float height, Color color);
 		void drawSprite(std::string textureDict, std::string textureName, float x, float y, float width, float height, float rotation, Color color);
 		void DrawGlare(float posX, float posY, float sizeX, float sizeY, Color color);
 		void drawOptionPlusTitle(std::string title);
-		void drawOptionPlusImage(std::string &extra, float &finalHeight);
-		void drawOptionPlusSprite(std::string &extra, float &finalHeight);
-		void drawOptionPlusText(std::string &extra, float &finalHeight);
-		void drawOptionPlusExtras(std::vector<std::string> &extra, std::string title = "Info");
+		void drawOptionPlusImage(std::string& extra, float& finalHeight);
+		void drawOptionPlusSprite(std::string& extra, float& finalHeight);
+		void drawOptionPlusText(std::string& extra, float& finalHeight);
+		void drawOptionPlusExtras(std::vector<std::string>& extra, std::string title = "Info");
 		void drawMenuDetails(std::vector<std::string> details, float y);
 		void drawOptionValue(std::string printVar, bool highlighted, int max = 0);
 
@@ -738,11 +770,11 @@ namespace NativeMenu {
 		void disableKeys();
 		void processMenuNav(std::function<void()> onMain, std::function<void()> onExit);
 		void updateScreenSize();
-		void fitTitle(std::string &title, float &newSize, float titleSize);
+		void fitTitle(std::string& title, float& newSize, float titleSize);
 
 		template <typename T>
-		bool processOptionItemControls(T &var, T min, T max, T step,bool isprivate=false) {
-			if (!isprivate&&currentoption == optioncount) {
+		bool processOptionItemControls(T& var, T min, T max, T step, bool isprivate = false) {
+			if (!isprivate && currentoption == optioncount) {
 				if (optionpress)
 					var = (T)FloatKeyboard();
 				if (leftpress) {
@@ -768,7 +800,7 @@ namespace NativeMenu {
 
 		// https://stackoverflow.com/questions/2333728/stdmap-default-value
 		template <template<class, class, class...> class C, typename K, typename V, typename... Args>
-		V getWithDef(const C<K, V, Args...>& m, K const& key, const V & defval) {
+		V getWithDef(const C<K, V, Args...>& m, K const& key, const V& defval) {
 			typename C<K, V, Args...>::const_iterator it = m.find(key);
 			if (it == m.end())
 				return defval;

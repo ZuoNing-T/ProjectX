@@ -94,3 +94,6 @@
 /Temp/Injector/Release/Injector.log
 /Temp/Injector/Release/Injector.Build.CppClean.log
 /SDK/lib/ScriptHookV.lib
+*.ipch
+*.cache
+/Update/obj/Release/Update.csproj.FileListAbsolute.txt

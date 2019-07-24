@@ -288,6 +288,23 @@ void remote(int select)
 	addTitle("Remote Functions");
 	//menu.MenuOption("Trigger_SCRIPT_EVENT_test", "triggertest");
 	//menu.MenuOption("remote Message", "remotemsg");
+	if (menu.Option("Casino Event"))
+	{
+	//	Any	Args[] = {
+	//1593808645,//0
+	//selectplayer,//1
+	//124,//or something else
+	//selectplayer,
+	//0,//or 1
+	//1,
+	//{Vector3},//6-8
+	//0,
+	//-1,
+
+	//Global_2424047[PLayer_ID + /*416*/].f_309.f_23,
+	//-1,
+	//	}
+	}
 	if (menu.Option("Game Clock"))
 	{
 		static uint32_t*(*SET_CLOCK)(int ped, int* coords) = "48 89 5C 24 ? 57 48 83 EC 20 8B F9 48 8B 0D ? ? ? ? 48 8B DA 33 D2"_Scan.as<decltype(SET_CLOCK)>();
